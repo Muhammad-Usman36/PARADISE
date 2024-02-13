@@ -241,10 +241,11 @@ const $inputWrapperStyle: ViewStyle = {
   flexDirection: "row",
   alignItems: "flex-start",
   borderWidth: 1,
-  borderRadius: 4,
+  borderRadius: 18,
   backgroundColor: colors.palette.neutral200,
   borderColor: colors.palette.neutral400,
   overflow: "hidden",
+  marginBottom: 20,
 }
 
 const $inputStyle: TextStyle = {
@@ -253,12 +254,14 @@ const $inputStyle: TextStyle = {
   fontFamily: typography.primary.normal,
   color: colors.text,
   fontSize: 16,
-  height: 24,
+  height: 35,
   // https://github.com/facebook/react-native/issues/21720#issuecomment-532642093
   paddingVertical: 0,
   paddingHorizontal: 0,
-  marginVertical: spacing.xs,
+  marginVertical: spacing.xxs,
   marginHorizontal: spacing.sm,
+  marginTop:15,
+
 }
 
 const $helperStyle: TextStyle = {
@@ -269,6 +272,7 @@ const $rightAccessoryStyle: ViewStyle = {
   marginEnd: spacing.xs,
   height: 40,
   justifyContent: "center",
+  marginTop:6,
   alignItems: "center",
 }
 const $leftAccessoryStyle: ViewStyle = {
@@ -276,4 +280,6 @@ const $leftAccessoryStyle: ViewStyle = {
   height: 40,
   justifyContent: "center",
   alignItems: "center",
+  marginTop:5,
+
 }
