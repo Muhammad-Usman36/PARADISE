@@ -18,6 +18,9 @@ import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 import { colors } from "app/theme"
 import { F } from "app/screens"
 import { CA } from "app/screens/CA"
+import BT from "app/screens/BT"
+import profile from "app/screens/profile"
+import { Home } from "app/screens/Home"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -57,10 +60,12 @@ const AppStack = observer(function AppStack() {
     <Stack.Navigator
       screenOptions={{ headerShown: false, navigationBarColor: colors.background }}
     >
+          {/** 🔥 Your screens go here */}
           <Stack.Screen name="F" component={F}/>
           <Stack.Screen name="CA" component={CA}/>
+          <Stack.Screen name="BT" component={BT}/>
 
-      {/** 🔥 Your screens go here */}
+      
       {/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
     </Stack.Navigator>
   )

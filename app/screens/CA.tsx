@@ -20,12 +20,13 @@ const validationSchema = yup.object().shape({
 const welcomeLogo = require("../../assets/images/Jlogo.png")
 
 
-export const CA=()=> {
+export const CA=(props)=> {
   
 
   const handleSubmit = (values) => {
     console.log(values);
   Alert.alert('data submit');
+props.navigation.navigate("BT");
 };
   return (
     <View style={$container}>
@@ -34,9 +35,9 @@ export const CA=()=> {
       <Icon icon="caretLeft" size={30} />
       </TouchableOpacity>
         
-      <Text style={{alignSelf: 'center', fontWeight:"bold",fontSize: 30,marginTop:20,margin:10,textAlign:'center',lineHeight:40}}>Create an account</Text>
+      <Text style={{alignSelf: 'center', fontWeight:"bold",fontSize: 35,marginTop:10,margin:10,textAlign:'center',lineHeight:40}}>Create an account</Text>
 
-<Text style={{alignItems: 'center',marginHorizontal: 10,textAlign:'center',fontSize:16,marginBottom:80}}>Invest and double your income now</Text>
+<Text style={{alignItems: 'center',marginHorizontal: 10,textAlign:'center',fontSize:18,marginBottom:60}}>Invest and double your income now</Text>
  
        
         
@@ -88,7 +89,7 @@ text="Create account"
         )}
       </Formik>
 
-      <View style={{marginTop: 20,alignSelf:'center',marginBottom:30}}>
+      <View style={{marginTop: 20,alignSelf:'center',marginBottom:150}}>
       <Text style={{color:'#008000'}}>Already have an account?</Text>
       </View>
               
