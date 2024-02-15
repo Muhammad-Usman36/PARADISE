@@ -3,9 +3,9 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Product from './Product';
-import Account from './Account';
 import { Home } from './Home';
 import { Transaction } from './Transaction';
+import { Account } from './Account';
 
 const Tab = createBottomTabNavigator();
 

@@ -12,16 +12,15 @@ export const Home=(props)=> {
 
   return (
     <View style={$container}>
-      <View style={$topContainer}>
         <View style={{height:40,width:40}}>
 
         </View>
-        <View style={{flexDirection:'row',marginTop:10}}>
+        <View style={{flexDirection:'row',marginTop:20,marginLeft:20}}>
       <TouchableOpacity onPress={()=>goBack('CA')}>
-      <Icon icon="caretLeft" size={30} />
+      <Icon icon="menu" size={30} />
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>props.navigation.navigate('Transaction')}>
-      <Icon icon="bell" size={30} style={{marginLeft:240}} />
+      <Icon icon="bell" size={30} style={{marginLeft:250}} />
       </TouchableOpacity>
       </View>
 
@@ -44,7 +43,7 @@ export const Home=(props)=> {
 
 
 
-<View style={{flexDirection:'row',marginBottom:10}}>
+<View style={{flexDirection:'row',marginBottom:10,marginLeft:20}}>
 <Text style={{fontWeight:'bold',fontSize: 22,lineHeight:25,marginLeft:5}}>Best plans</Text>
 <TouchableOpacity onPress={()=>props.navigation.navigate('Product')}>
 <Text style={{fontWeight:'bold',fontSize: 16,marginLeft:130,color:'red'}}>See All</Text>
@@ -53,7 +52,7 @@ export const Home=(props)=> {
 </View>
 
 
-<View style={{flexDirection:'row'}}>
+<ScrollView horizontal={true} style={{marginLeft:20}}>
   <Image
   style={{height:160,width:130,borderRadius:30}}
         source={require('../../assets/images/GO.png')}
@@ -75,14 +74,17 @@ export const Home=(props)=> {
       />
 
 
-</View>
+</ScrollView>
 
 
 
 
-<Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:20,marginTop:20,marginBottom:10}}>Investment Guide</Text>
+<Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 20,fontSize:20,margin:20}}>Investment Guide</Text>
  
        
+<ScrollView>
+
+
  <View style={$dbox}>
   <View style={$dboxt}>
   <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:15,marginTop:10}}>Basic type of investments</Text>
@@ -93,6 +95,9 @@ export const Home=(props)=> {
         source={require('../../assets/images/C2.png')}
       />
  </View>
+ <View style={{height:0.5,width:300,alignSelf:'center',backgroundColor:'black'}}></View>
+
+
 
 
  <View style={$dbox}>
@@ -105,17 +110,50 @@ export const Home=(props)=> {
         source={require('../../assets/images/C1.png')}
       />
  </View>
-      
+ <View style={{height:0.5,width:300,alignSelf:'center',backgroundColor:'black'}}></View>
+
+
+
+
+
+ <View style={$dbox}>
+  <View style={$dboxt}>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:15,marginTop:10}}>Basic type of investments</Text>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:12,lineHeight:15}}>This is how you set your foot for 2020 Stock market recession. What’s next...</Text>
+  </View>
+  <Image
+  style={{height:60,width:60,borderRadius:40, marginLeft:5,marginTop:10}}
+        source={require('../../assets/images/C2.png')}
+      />
+ </View>
+ <View style={{height:0.5,width:300,alignSelf:'center',backgroundColor:'black'}}></View>
+
+
+ 
+
+
+ <View style={$dbox}>
+  <View style={$dboxt}>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:15,marginTop:10}}>Basic type of investments</Text>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:12,lineHeight:15}}>This is how you set your foot for 2020 Stock market recession. What’s next...</Text>
+  </View>
+  <Image
+  style={{height:60,width:60,borderRadius:40, marginLeft:5,marginTop:10}}
+        source={require('../../assets/images/C2.png')}
+      />
+ </View>
+ <View style={{height:0.5,width:300,alignSelf:'center',backgroundColor:'black'}}></View>
+
+       
+ </ScrollView>
        
       </View>
 
      
-    </View>
   )
 }
 
 const $container: ViewStyle = {
-  flex: 1,
   backgroundColor: colors.background,
 }
 
@@ -129,10 +167,12 @@ const $topContainer: ViewStyle = {
 
 const $gbox: ViewStyle = {
   height: 120,
-  width: "100%",
+  width: 320,
   borderRadius:30,
+  alignSelf:'center',
   backgroundColor:'#228B22',
   marginBottom: spacing.lg,
+  marginTop:10,
 }
 const $wbt: ViewStyle = {
     marginTop: 5,
@@ -147,7 +187,7 @@ const $wbt: ViewStyle = {
     width: 300,
     height: 90,
     borderRadius:15,
-    marginLeft:5,
+    marginLeft:20,
     flexDirection:'row'
 
    }
