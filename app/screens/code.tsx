@@ -1,34 +1,64 @@
-import React from 'react';
-import { View, FlatList, Text } from 'react-native';
-
-const App = () => {
-  const names = [
-    { id: '1', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
-    { id: '2', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
-    { id: '3', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
-    { id: '4', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
-    { id: '5', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
-
-   
-  ];
-
-  const renderItem = ({ item }) => (
-    <View style={{ margin:10,height:120,width:280,backgroundColor:'red' }}>
-      <Text style={{color:'black'}}>{item.name}</Text>
-      <Text style={{color:'black'}}>{item.rb}</Text>
-      <Text style={{color:'black'}}>{item.rs}</Text>
+<ScrollView>
 
 
-    </View>
-  );
+ <View style={$dbox}>
+  <View style={$dboxt}>
+  <Text style={$bt}>Basic type of investments</Text>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:12,lineHeight:15}}>This is how you set your foot for 2020 Stock market recession. What’s next...</Text>
+  </View>
+  <Image
+  style={{height:60,width:60,borderRadius:40, marginLeft:5,marginTop:10}}
+        source={require('../../assets/images/C2.png')}
+      />
+ </View>
+ <View style={{height:0.5,width:300,alignSelf:'center',backgroundColor:'black'}}></View>
 
-  return (
-    <FlatList
-      data={names}
-      renderItem={renderItem}
-      keyExtractor={item => item.id}
-    />
-  );
-};
 
-export default App;
+
+
+ <View style={$dbox}>
+  <View style={$dboxt}>
+  <Text style={$bt}>Basic type of investments</Text>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:12,lineHeight:15}}>This is how you set your foot for 2020 Stock market recession. What’s next...</Text>
+  </View>
+  <Image
+  style={{height:60,width:60,borderRadius:40, marginLeft:5,marginTop:10}}
+        source={require('../../assets/images/C1.png')}
+      />
+ </View>
+ <View style={{height:0.5,width:300,alignSelf:'center',backgroundColor:'black'}}></View>
+
+
+
+
+
+ <View style={$dbox}>
+  <View style={$dboxt}>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:15,marginTop:10}}>Basic type of investments</Text>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:12,lineHeight:15}}>This is how you set your foot for 2020 Stock market recession. What’s next...</Text>
+  </View>
+  <Image
+  style={{height:60,width:60,borderRadius:40, marginLeft:5,marginTop:10}}
+        source={require('../../assets/images/C2.png')}
+      />
+ </View>
+ <View style={{height:0.5,width:300,alignSelf:'center',backgroundColor:'black'}}></View>
+
+
+ 
+
+
+ <View style={$dbox}>
+  <View style={$dboxt}>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:15,marginTop:10}}>Basic type of investments</Text>
+  <Text style={{fontWeight:'bold',alignItems: 'center',marginHorizontal: 5,fontSize:12,lineHeight:15}}>This is how you set your foot for 2020 Stock market recession. What’s next...</Text>
+  </View>
+  <Image
+  style={{height:60,width:60,borderRadius:40, marginLeft:5,marginTop:10}}
+        source={require('../../assets/images/C2.png')}
+      />
+ </View>
+ <View style={{height:0.5,width:300,alignSelf:'center',backgroundColor:'black'}}></View>
+
+       
+ </ScrollView>
