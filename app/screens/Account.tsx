@@ -18,10 +18,10 @@ export const Account=(props:any)=> {
       <Icon icon="caretLeft" size={30} style={{marginLeft:10}} />
       </TouchableOpacity>
         
-      <Text style={{marginLeft:20, fontWeight:"bold",fontSize: 35,marginTop:10,marginBottom:10,lineHeight:40}}>Profile</Text>
-<View style={{height:120,width:120,backgroundColor:'black',alignSelf:'center',marginBottom:20,borderRadius:100}}>
+      <Text style={{marginLeft:20, fontWeight:"bold",fontSize: 35,marginTop:10,marginBottom:20,lineHeight:40}}>Profile</Text>
+<View style={{height:140,width:140,backgroundColor:'black',alignSelf:'center',marginBottom:20,borderRadius:100}}>
 <Image
-  style={{height:120,width:120,borderRadius:100,alignSelf:'center'}}
+  style={{height:140,width:140,borderRadius:100,alignSelf:'center'}}
         source={require('../../assets/images/PO.png')}
       />
 </View>
@@ -34,33 +34,45 @@ export const Account=(props:any)=> {
        
         
 
-<TouchableOpacity onPress={()=>props.navigation.navigate('Home')}>
+<TouchableOpacity onPress={()=>props.navigation.navigate('CI')}>
 <View style={$vbox}>
-      <Text style={{fontWeight:'bold',margin:10}}>Contact Info</Text>
+<Icon icon="user" size={20} style={{marginLeft:10,marginTop:15}} />
+      <Text style={{fontWeight:'bold',margin:12}}>Contact Info</Text>
       <Icon icon="caretRight" size={35}style={{  marginLeft:115,marginTop:6,}}/>
       </View>
       </TouchableOpacity>
 
-              
+      <TouchableOpacity onPress={()=>props.navigation.navigate('SFI')}>
       <View style={$vbox}>
-      <Text style={{fontWeight:'bold',margin:10}}>Source of Funding Info</Text>
+      <Icon icon="bell" size={20} style={{marginLeft:10,marginTop:15}} />
+      <Text style={{fontWeight:'bold',margin:12}}>Source of Funding Info</Text>
       <Icon icon="caretRight" size={35} style={{  marginLeft:40,marginTop:6,}}/>
       </View>
+      </TouchableOpacity>
 
+      <TouchableOpacity onPress={()=>props.navigation.navigate('BA')}>
       <View style={$vbox}>
-      <Text style={{fontWeight:'bold',margin:10}}>Bank Account Info</Text>
+      <Icon icon="home" size={20} style={{marginLeft:10,marginTop:15}} />
+      <Text style={{fontWeight:'bold',margin:12}}>Bank Account Info</Text>
       <Icon icon="caretRight" size={35} style={{  marginLeft:70,marginTop:6,}}/>
       </View>
+      </TouchableOpacity>
 
+      <TouchableOpacity onPress={()=>props.navigation.navigate('DI')}>
       <View style={$vbox}>
-      <Text style={{fontWeight:'bold',margin:10}}>Document Info</Text>
+      <Icon icon="menu" size={20} style={{marginLeft:10,marginTop:15}} />
+      <Text style={{fontWeight:'bold',margin:12}}>Document Info</Text>
       <Icon icon="caretRight" size={35} style={{  marginLeft:95,marginTop:6,}}/>
       </View>
+      </TouchableOpacity>
 
+      <TouchableOpacity onPress={()=>props.navigation.navigate('Set')}>
       <View style={$vbox}>
-      <Text style={{fontWeight:'bold',margin:10}}>Settings</Text>
+      <Icon icon="settings" size={20} style={{marginLeft:10,marginTop:15}} />
+      <Text style={{fontWeight:'bold',margin:12}}>Settings</Text>
       <Icon icon="caretRight" size={35} style={{  marginLeft:140,marginTop:6,}}/>
       </View>
+      </TouchableOpacity>
 
 
 
@@ -89,4 +101,4 @@ const $welcomeLogo: ImageStyle = {
   marginTop:6,
 }
 const $vbox: ViewStyle = {
-  marginBottom:15,height:50, width:260,backgroundColor:'white',alignSelf:'center',flexDirection:'row',elevation:2,borderRadius:5}
+  marginBottom:15,height:50, width:310,backgroundColor:'white',alignSelf:'center',flexDirection:'row',elevation:2,borderRadius:10}

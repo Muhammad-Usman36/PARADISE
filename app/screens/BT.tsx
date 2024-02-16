@@ -15,7 +15,6 @@ const Tab = createBottomTabNavigator();
 
 export default function BT() {
   return (
-    <NavigationContainer  independent={true}>
       <Tab.Navigator screenOptions={{headerShown:false}}>
         <Tab.Screen name="Home" component={Home}
         options={{
@@ -45,6 +44,5 @@ export default function BT() {
           ),
         }}/>
       </Tab.Navigator>
-    </NavigationContainer>
   );
 }

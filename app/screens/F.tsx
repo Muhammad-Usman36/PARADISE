@@ -34,9 +34,11 @@ export const F=(props) => {
 text="Create account"
 style={$icon}
 />
-<Text style={{alignSelf: 'center',fontSize: 18,margin:10,textAlign:'center',color:'#008000'}}>
+<TouchableOpacity onPress={()=>props.navigation.navigate('Login')}>
+<Text style={{alignSelf: 'center',fontSize: 18,margin:10,textAlign:'center',color:colors.error}}>
   Login
 </Text>
+</TouchableOpacity>
 
       </View>
     </View>
@@ -49,7 +51,7 @@ const $container: ViewStyle = {
 }
 const $icon: ViewStyle = {
  marginTop: 60,
- backgroundColor:'#008000',
+ backgroundColor:colors.error,
 }
 const $topContainer: ViewStyle = {
   flexShrink: 1,

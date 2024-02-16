@@ -35,7 +35,7 @@ export const Home=(props)=> {
 <Text style={{fontWeight:'bold',fontSize: 25,marginTop:2,lineHeight:40,marginLeft:30,color:'white'}}>N203,935</Text>
 <TouchableOpacity onPress={()=>props.navigation.navigate('Product')}>
 <View style={$wbt}>
-<Text style={{fontWeight:'bold',fontSize: 15,marginTop:5,lineHeight:30,alignSelf:'center',color:'#008000'}}>Invest now</Text>
+<Text style={{fontWeight:'bold',fontSize: 15,marginTop:5,lineHeight:30,alignSelf:'center',color:colors.error}}>Invest now</Text>
 </View>
 </TouchableOpacity>
 </View>
@@ -197,7 +197,7 @@ const $gbox: ViewStyle = {
   width: 320,
   borderRadius:30,
   alignSelf:'center',
-  backgroundColor:'#228B22',
+  backgroundColor:colors.error,
   marginBottom: spacing.lg,
   marginTop:10,
 }

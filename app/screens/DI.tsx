@@ -5,7 +5,7 @@ import { View, Text } from 'react-native';
 export default function DI() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Screen 1</Text>
+      <Text>Document info</Text>
     </View>
   );
 }

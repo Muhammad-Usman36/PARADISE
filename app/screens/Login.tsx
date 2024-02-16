@@ -1,46 +1,37 @@
-import { observer } from "mobx-react-lite"
-import React, { FC } from "react"
-import { Image, ImageStyle,TouchableOpacity, View, ViewStyle,Alert } from "react-native"
+import React from "react"
+import { Image,TouchableOpacity,ImageStyle, View, ViewStyle,Alert } from "react-native"
 import { Text,Button,Icon,TextField,Screen} from "app/components"
-import { isRTL } from "../i18n"
-import { AppStackScreenProps, goBack } from "../navigators"
 import { colors, spacing } from "../theme"
 import { Formik } from "formik";
 import * as yup from "yup";
-//<Image style={$welcomeFace} source={welcomeFace} resizeMode="contain" />
+import { goBack } from "app/navigators";
+import TB from "./TB";
 
 
 const validationSchema = yup.object().shape({
-  name: yup.string().required('your name please'),
   email: yup.string().min(6).email('Enter a valid email').required('Emil is reaquired'),
   pasward: yup.string().min(6).required('Pasward is reaquired'),
 });
 
 
-const welcomeLogo = require("../../assets/images/Jlogo.png")
+const welcomeLogo = require("../../assets/images/PA.png")
 
 
-export const CA=(props)=> {
-  
+export const Login=(props:any)=> {
+
 
   const handleSubmit = (values) => {
     console.log(values);
-  Alert.alert('Account is created');
-props.navigation.navigate("BT");
-};
+  Alert.alert('Welcome Back');
+  props.navigation.navigate("BT");
+
+  };
   return (
     <Screen preset="scroll">
-
     <View style={$container}>
       <View style={$topContainer}>
-      <TouchableOpacity onPress={()=>goBack('F')}>
-      <Icon icon="caretLeft" size={30} />
-      </TouchableOpacity>
-        
-      <Text style={{alignSelf: 'center', fontWeight:"bold",fontSize: 35,marginTop:10,margin:10,textAlign:'center',lineHeight:40}}>Create an account</Text>
+        <Image style={$welcomeLogo} source={welcomeLogo} tintColor={colors.theam} resizeMode="contain" />
 
-<Text style={{alignItems: 'center',marginHorizontal: 10,textAlign:'center',fontSize:18,marginBottom:60}}>Invest and double your income now</Text>
- 
        
         
 <Formik
@@ -49,21 +40,15 @@ props.navigation.navigate("BT");
         validationSchema={validationSchema}
       >
         {({ handleChange, handleBlur, handleSubmit, values, errors }) => (
-          <View>
-            <TextField
-             onChangeText={handleChange('name')}
-             onBlur={handleBlur('name')}
-             value={values.name}
-              placeholder="Full name"
-              placeholderTextColor={"black"}
-            />
-            {errors.name && <Text style={{ color: 'red' }}>{errors.name}</Text>}
+          <View style={{marginTop: 20}}>
 
             <TextField
              onChangeText={handleChange('email')}
              onBlur={handleBlur('email')}
              value={values.email}
-              placeholder="Email Adress"
+              label="Email  Address"
+              LeftAccessory={(props) => <Icon icon="menu" containerStyle={props.style} size={21} />}
+              placeholder="Email  Adress"
               placeholderTextColor={"black"}
             />
                   {errors.email && <Text style={{ color: 'red' }}>{errors.email}</Text>}
@@ -75,39 +60,49 @@ props.navigation.navigate("BT");
              onChangeText={handleChange('pasward')}
              onBlur={handleBlur('pasward')}
              value={values.pasward}
+              label="Passward"
               secureTextEntry={true}
-              placeholder="Password"
+              RightAccessory={(props) => <Icon icon="hidden" containerStyle={props.style} size={21} />}
+              LeftAccessory={(props) => <Icon icon="lock" containerStyle={props.style} size={21} />}
+              placeholder="Passward"
               placeholderTextColor={"black"}
             />
             {errors.pasward && <Text style={{ color: 'red' }}>{errors.pasward}</Text>}
-
+            
 
 <Button
-style={$icon}
-text="Create account"
+style={{marginTop: 20}}
+text="Log in"
         onPress={handleSubmit}
       />
         </View>
+
+
+
         )}
       </Formik>
 
-      <View style={{marginTop: 20,alignSelf:'center',marginBottom:150}}>
-        <TouchableOpacity onPress={()=>props.navigation.navigate('Login')}>
-      <Text style={{color:colors.error}}>Already have an account?</Text>
+
+
+
+
+      <View style={{flexDirection: 'row',marginHorizontal: 10,marginTop: 20}}>
+      <Text>Don't have an account?  </Text>
+      <TouchableOpacity onPress={()=>props.navigation.navigate('CA')}>
+      <Text style={{  fontWeight:'bold',color: colors.error}}>Sign up now</Text>
       </TouchableOpacity>
       </View>
               
-       
-      </View>
 
-     
+
+
+      </View>
     </View>
     </Screen>
   )
 }
 
 const $container: ViewStyle = {
-  marginTop: spacing.xxxl,
   backgroundColor: colors.background,
 }
 
@@ -120,11 +115,8 @@ const $topContainer: ViewStyle = {
 }
 
 const $welcomeLogo: ImageStyle = {
-  height: 160,
+    marginTop: spacing.xxxl,
+  height: 180,
   width: "100%",
   marginBottom: spacing.lg,
 }
-const $icon: ViewStyle = {
-    marginTop: 20,
-    backgroundColor:colors.error,
-   }

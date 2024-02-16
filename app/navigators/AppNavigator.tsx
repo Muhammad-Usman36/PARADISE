@@ -24,6 +24,11 @@ import { Home } from "app/screens/Home"
 import { Transaction } from "app/screens/Transaction"
 import { Account } from "app/screens/Account"
 import CI from "app/screens/CI"
+import { Login } from "app/screens/Login"
+import DI from "app/screens/DI"
+import Set from "app/screens/Set"
+import { SFI } from "app/screens/SFI"
+import { BA } from "app/screens/BA"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -60,17 +65,26 @@ const Stack = createNativeStackNavigator<AppStackParamList>()
 
 const AppStack = observer(function AppStack() {
   return (
+    <NavigationContainer  independent={true}>
     <Stack.Navigator
       screenOptions={{ headerShown: false, navigationBarColor: colors.background }}
     >
           {/** 🔥 Your screens go here */}
+
           <Stack.Screen name="F" component={F}/>
           <Stack.Screen name="CA" component={CA}/>
+          <Stack.Screen name="Login" component={Login}/>
           <Stack.Screen name="BT" component={BT}/>
           <Stack.Screen name="CI" component={CI}/>
+          <Stack.Screen name="SFI" component={SFI}/>
+          <Stack.Screen name="BA" component={BA}/>
+          <Stack.Screen name="DI" component={DI}/>
+          <Stack.Screen name="Set" component={Set}/>
+
           
       {/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
     </Stack.Navigator>
+    </NavigationContainer>
   )
 })
 

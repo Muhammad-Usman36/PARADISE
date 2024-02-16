@@ -15,8 +15,22 @@ export const Transaction=(props)=> {
     { id: '3', name: 'Rp 240.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
     { id: '4', name: 'Rp 100.240',rb:'TUE 22 Jun 2020',rs:'API `AppL` Stock' },
     { id: '5', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
-
-   
+    { id: '6', name: 'Rp 150.000',rb:'TUE 22 Jun 2020',rs:'API `AppL` Stock' },
+    { id: '7', name: 'Rp 240.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
+    { id: '8', name: 'Rp 100.240',rb:'TUE 22 Jun 2020',rs:'API `AppL` Stock' },
+    { id: '9', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
+    { id: '10', name: 'Rp 150.000',rb:'TUE 22 Jun 2020',rs:'API `AppL` Stock' },
+    { id: '11', name: 'Rp 240.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
+    { id: '12', name: 'Rp 100.240',rb:'TUE 22 Jun 2020',rs:'API `AppL` Stock' },
+    { id: '13', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
+    { id: '14', name: 'Rp 150.000',rb:'TUE 22 Jun 2020',rs:'API `AppL` Stock' },
+    { id: '15', name: 'Rp 240.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
+    { id: '16', name: 'Rp 100.240',rb:'TUE 22 Jun 2020',rs:'API `AppL` Stock' },
+    { id: '17', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
+    { id: '18', name: 'Rp 150.000',rb:'TUE 22 Jun 2020',rs:'API `AppL` Stock' },
+    { id: '19', name: 'Rp 240.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
+    { id: '20', name: 'Rp 100.240',rb:'TUE 22 Jun 2020',rs:'API `AppL` Stock' },
+    { id: '21', name: 'Rp 200.000',rb:'TUE 22 Jun 2020',rs:'Buy `AppL` Stock' },
   ];
 
   const renderItem = ({ item }) => (
